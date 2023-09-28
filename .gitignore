@@ -1,0 +1,5 @@
+test-news.html
+node_modules
+.env
+.parcel-cache
+dist
