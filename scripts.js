@@ -26,11 +26,23 @@ document.getElementById('prevPage').addEventListener('click', function() {
         currentPage--;
         fetchNews(currentQuery);  // Pass the currentQuery
         }
+    
+    // Scroll to the top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Optional, for smooth scrolling
+    });
 });
 
 document.getElementById('nextPage').addEventListener('click', function() {
     currentPage++;
     fetchNews(currentQuery);  // Pass the currentQuery
+    
+    // Scroll to the top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'  // Optional, for smooth scrolling
+    });
 });
 
 
