@@ -9,24 +9,54 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container mt-4">
-        <div class="text-center mb-4">
-            <h1 class="fw-bold">HeadlineHub</h1>
-        </div>
-        <div class="mb-4">
-            <h2>Top Headlines</h2>
-        </div>
-        <!-- Create search form for query -->
-        <form id="searchForm" class="mb-4">
-            <div class="input-group">
-                <input type="text" id="searchText" class="form-control" placeholder="Search for news...">
-                <button type="submit" class="btn btn-primary">Search</button>
+    <div class="container mt-4 container-flex">
+        <!-- Moved these divs above the search form -->
+        <div id="header-container" class="text-center">
+            <div class="text-center mb-4">
+                <h1 class="fw-bold">HeadlineHub</h1>
             </div>
-        </form>
-        <div id="news" class="row"> <!-- Updated to a 'row' class for a grid layout -->
-            <!-- Individual news cards will be appended here by your JavaScript -->
+            <div class="mb-4 text-center">
+                <h2>Top Headlines</h2>
+            </div>
         </div>
+        <!-- Search form remains here -->
+        <div id="search-container" class="mb-4">
+            <form id="searchForm">
+                <div class="input-group">
+                    <input type="text" id="searchText" class="form-control" placeholder="Search for news...">
+                    <!-- Pick a language -->
+                    <select id="language">
+                        <option value="all">All Languages</option>
+                        <option value="ar">Arabic</option>
+                        <option value="de">German</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="he">Hebrew</option>
+                        <option value="it">Italian</option>
+                        <option value="nl">Dutch</option>
+                        <option value="no">Norwegian</option>
+                        <option value="pt">Portuguese</option>
+                        <option value="ru">Russian</option>
+                        <option value="sv">Swedish</option>
+                        <option value="ud">Urdu</option>
+                        <option value="zh">Chinese</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
+            
+        </div>
+        <div id="news" class="text-center"></div>
+        <!-- Implement Pagination -->
+        <div id="pagination-buttons" class="pagination-container">
+            <button id="prevPage" class="btn btn-primary">Previous</button>
+            <button id="nextPage" class="btn btn-primary">Next</button>
+        </div>
+
+
     </div>
+    
     <script src="scripts.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

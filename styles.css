@@ -20,7 +20,7 @@ title {
 
 /* Thumbnail Size */
 .custom-thumbnail {
-    width: 500px;  /* Or whatever width you prefer */
+    width: 80%;  /* Or whatever width you prefer */
     height: auto;  /* Maintain aspect ratio */
     border: 1px solid #ddd;  /* Optional border */
     border-radius: 4px;  /* Optional rounded corners */
@@ -30,6 +30,8 @@ title {
     border: 1px solid #ddd; /* Set border style, width, and color */
     border-radius: 7px; /* Round corners, if desired */
     margin-bottom: 10px; /* Add space between cards */
+    /* shadow under card */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 h1 {
@@ -57,3 +59,87 @@ h1 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);  /* Add a subtle shadow on hover */
     border-radius: 7px;
 }
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Center h1 and h2 */
+#header-container {
+    position: absolute;
+    top: 30%;  /* adjust this as needed */
+    left: 50%;
+    transform: translate(-50%, -30%);  /* adjust this as needed */
+    width: 80%;  /* or set to a fixed width */
+    text-align: center;
+    order: 1;
+}
+
+#search-container {
+    order: 2;
+}
+
+/* Centered search bar */
+
+.centered {
+    width: 100%;  /* Match this to the width of your news cards */
+    margin: 20px auto;  /* Add some margin-top and bottom, and auto margin on the sides to center it */
+}
+
+.initial-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;  /* Match this to the width of your news cards */
+    text-align: center; 
+}
+
+#header-container, #search-container {
+    z-index: 1;
+}
+
+#news {
+    z-index: 0;
+    margin-top: 20px; /* Add top margin to push it down */
+    order: 3;
+    margin-bottom: 30px;
+}
+
+.centered, .card {
+    max-width: 800px; /* Set this to whatever value looks good at half-page size */
+    margin: 0 auto; /* This will center the elements if they are smaller than the max-width */
+}
+
+/* Implement pagination */
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    visibility: hidden;  /* Initially hidden */
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    padding-bottom: 5px;
+}
+  
+  .pagination-buttons {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-buttons:hover {
+    background-color: #0056b3;
+    border: 1px solid #edf0f4;
+  }
+  
+  #prevPage, #nextPage {
+    width: 100px; 
+  }
