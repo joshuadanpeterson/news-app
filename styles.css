@@ -143,3 +143,7 @@ h1 {
   #prevPage, #nextPage {
     width: 100px; 
   }
+
+  .container #nextPage {
+    margin-right: 20px
+  }
